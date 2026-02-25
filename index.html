@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Top spillere</title>
+  </head>
+
+  <body>
+    <!-- Overskrift -->
+    <h1>Top spillere</h1>
+
+    <!-- Tom liste som vi fylder med JavaScript -->
+    <ul></ul>
+
+    <script>
+      // 1️⃣ Find <ul>-elementet i HTML
+      // Vi gemmer det i variablen "ul"
+      const ul = document.querySelector("ul");
+
+      // 2️⃣ Lav et array med spillernes navne
+      const topSpillere = ["Zlatan", "Messi", "Ronaldo", "Neymar", "Mbappe"];
+
+      // 3️⃣ Gå igennem arrayet én spiller ad gangen
+      // For hvert navn bliver funktionen "lavListeElement" kaldt
+      topSpillere.forEach(lavListeElement);
+
+      // 4️⃣ Funktionen modtager ÉT navn ad gangen
+      // Parameteren "spiller" er bare et navn vi selv vælger
+      function lavListeElement(spiller) {
+        // 5️⃣ Tilføj et nyt <li>-element til <ul>
+        // += betyder: tilføj til det der allerede er der
+        // `${spiller}` indsætter det aktuelle navn
+        ul.innerHTML += `<li>${spiller}</li>`;
+      }
+    </script>
+  </body>
+</html>
